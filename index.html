@@ -3,777 +3,598 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospitality Hospital | Food Business Consulting for Restaurants & Eateries in Kenya</title>
-    <meta name="description" content="Hospitality Hospital offers expert consulting for restaurants and eateries in Kenya. Boost your profits, improve efficiency, and attract more customers.">
-    <meta name="keywords" content="hospitality consulting, restaurant business, Kenya eateries, food consultancy, menu development, branding, cost control, Nairobi">
-    <meta name="author" content="Hospitality Hospital">
-    <meta property="og:title" content="Hospitality Hospital - Restaurant Consulting Services">
-    <meta property="og:description" content="Helping restaurants and eateries in Kenya thrive with practical and affordable food business consulting.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80">
-    <meta property="og:url" content="https://hospitality-hospital.github.io">
-    <meta name="twitter:card" content="summary_large_image">
+    <title>Anipulate Consulting Group | Image with Strategic Intent</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        .hero-pattern {
-            background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1470&q=80');
-            background-size: cover;
-            background-position: center;
-            background-blend-mode: overlay;
+        body {
+            font-family: 'Lato', sans-serif;
         }
-        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0a3d62 0%, #1e3799 100%);
+        }
         .service-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
-        
         .testimonial-card {
-            transition: all 0.3s ease;
+            background: linear-gradient(to bottom right, #f8f9fa, #ffffff);
         }
-        
-        .testimonial-card:hover {
-            transform: scale(1.03);
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
         }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .fade-in {
-            animation: fadeIn 1s ease forwards;
-        }
-        
-        /* Updated color palette */
-        .bg-primary { background-color: #1e6b52; } /* Deep green */
-        .bg-secondary { background-color: #1e4b6b; } /* Deep blue */
-        .bg-accent { background-color: #2d9d78; } /* Medium green */
-        .text-primary { color: #1e6b52; }
-        .text-secondary { color: #1e4b6b; }
-        .border-primary { border-color: #1e6b52; }
-        .border-secondary { border-color: #1e4b6b; }
-        .hover\:bg-primary:hover { background-color: #1a5a45; } /* Darker green */
-        .hover\:bg-secondary:hover { background-color: #183c58; } /* Darker blue */
     </style>
 </head>
-<body class="font-sans bg-gray-50">
+<body class="text-gray-800 bg-gray-50">
     <!-- Navigation -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <i class="fas fa-utensils text-3xl text-primary"></i>
-                <span class="text-xl font-bold text-gray-800">Hospitality Hospital</span>
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-teal-900">ANIPULATE</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-800 hover:text-teal-600">Home</a>
+                    <a href="#about" class="text-gray-800 hover:text-teal-600">About</a>
+                    <a href="#services" class="text-gray-800 hover:text-teal-600">Services</a>
+                    <a href="#case-studies" class="text-gray-800 hover:text-teal-600">Case Studies</a>
+                    <a href="#contact" class="text-gray-800 hover:text-teal-600">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button">
+                        <i class="fas fa-bars text-2xl text-gray-800"></i>
+                    </button>
+                </div>
             </div>
-            
-            <div class="hidden md:flex space-x-8">
-                <a href="#home" class="text-primary font-medium hover:text-secondary transition">Home</a>
-                <a href="#services" class="text-gray-700 hover:text-primary transition">Services</a>
-                <a href="#about" class="text-gray-700 hover:text-primary transition">About</a>
-                <a href="#testimonials" class="text-gray-700 hover:text-primary transition">Success Stories</a>
-                <a href="#contact" class="text-gray-700 hover:text-primary transition">Contact</a>
+            <!-- Mobile menu -->
+            <div class="mobile-menu hidden md:hidden py-4">
+                <a href="#home" class="block py-2 hover:text-teal-600">Home</a>
+                <a href="#about" class="block py-2 hover:text-teal-600">About</a>
+                <a href="#services" class="block py-2 hover:text-teal-600">Services</a>
+                <a href="#case-studies" class="block py-2 hover:text-teal-600">Case Studies</a>
+                <a href="#contact" class="block py-2 hover:text-teal-600">Contact</a>
             </div>
-            
-            <button class="md:hidden text-gray-700 focus:outline-none" id="menu-toggle">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div class="md:hidden hidden bg-white py-2 px-4 shadow-lg" id="mobile-menu">
-            <a href="#home" class="block py-2 text-gray-700 hover:text-primary transition">Home</a>
-            <a href="#services" class="block py-2 text-gray-700 hover:text-primary transition">Services</a>
-            <a href="#about" class="block py-2 text-gray-700 hover:text-primary transition">About</a>
-            <a href="#testimonials" class="block py-2 text-gray-700 hover:text-primary transition">Success Stories</a>
-            <a href="#contact" class="block py-2 text-gray-700 hover:text-primary transition">Contact</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-pattern bg-primary bg-opacity-90 text-white py-20 md:py-32">
-        <div class="container mx-auto px-4 text-center fade-in">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">Elevate Your Restaurant Business</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Affordable consulting services tailored for restaurants and eateries to boost profits and streamline operations</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#contact" class="bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 shadow-lg">Get Started</a>
-                <a href="#services" class="border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-primary transition duration-300">Our Services</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="bg-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div class="p-6">
-                    <div class="text-4xl font-bold text-primary mb-2">150+</div>
-                    <div class="text-gray-600">Eateries Helped</div>
-                </div>
-                <div class="p-6">
-                    <div class="text-4xl font-bold text-primary mb-2">40%</div>
-                    <div class="text-gray-600">Average Profit Increase</div>
-                </div>
-                <div class="p-6">
-                    <div class="text-4xl font-bold text-primary mb-2">100%</div>
-                    <div class="text-gray-600">Affordable Rates</div>
-                </div>
-                <div class="p-6">
-                    <div class="text-4xl font-bold text-primary mb-2">24/7</div>
-                    <div class="text-gray-600">Support Available</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Specialized Services</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Tailored solutions designed specifically for restaurants and eateries with limited budgets</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
-                    <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-green-100 p-3 rounded-full mr-4">
-                                <i class="fas fa-book-open text-primary text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-800">Menu Optimization</h3>
-                        </div>
-                        <p class="text-gray-600 mb-4">We analyze your current offerings and create profitable, appealing menu combinations that resonate with your customers while maximizing your margins.</p>
-                        <div class="flex items-center text-sm text-primary font-medium">
-                            <span>Starting from Ksh 3,000</span>
-                        </div>
+    <section id="home" class="hero-gradient text-white py-20 md:py-32">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Image with Strategic Intent</h1>
+                    <p class="text-xl mb-8">Helping professionals, public figures, and brands craft presence that commands respect and delivers results.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#consultation" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-lg text-center transition duration-300">
+                            <i class="fas fa-calendar-check mr-2"></i> Book Free Consultation
+                        </a>
+                        <a href="https://wa.me/254756320394" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg text-center transition duration-300">
+                            <i class="fab fa-whatsapp mr-2"></i> WhatsApp Us
+                        </a>
                     </div>
                 </div>
-                
-                <!-- Service 2 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
-                    <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-green-100 p-3 rounded-full mr-4">
-                                <i class="fas fa-utensils text-primary text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-800">Recipe Development</h3>
-                        </div>
-                        <p class="text-gray-600 mb-4">Our culinary experts create simple yet delicious recipes using locally available ingredients that will set your restaurant apart from competitors.</p>
-                        <div class="flex items-center text-sm text-primary font-medium">
-                            <span>Starting from Ksh 5,000</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
-                    <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-green-100 p-3 rounded-full mr-4">
-                                <i class="fas fa-chart-line text-primary text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-800">Cost Control</h3>
-                        </div>
-                        <p class="text-gray-600 mb-4">Learn how to manage your food costs effectively, reduce waste, and negotiate better prices with suppliers to maximize your profits.</p>
-                        <div class="flex items-center text-sm text-primary font-medium">
-                            <span>Starting from Ksh 4,500</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Service 4 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
-                    <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-green-100 p-3 rounded-full mr-4">
-                                <i class="fas fa-users text-primary text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-800">Customer Attraction</h3>
-                        </div>
-                        <p class="text-gray-600 mb-4">Strategies to attract more customers to your restaurant without expensive marketing, using simple techniques that work in local communities.</p>
-                        <div class="flex items-center text-sm text-primary font-medium">
-                            <span>Starting from Ksh 3,500</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Service 5 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
-                    <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-green-100 p-3 rounded-full mr-4">
-                                <i class="fas fa-clock text-primary text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-800">Efficiency Training</h3>
-                        </div>
-                        <p class="text-gray-600 mb-4">Streamline your operations to serve more customers in less time with our practical workflow optimization techniques for small kitchens.</p>
-                        <div class="flex items-center text-sm text-primary font-medium">
-                            <span>Starting from Ksh 6,000</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Service 6 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
-                    <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-green-100 p-3 rounded-full mr-4">
-                                <i class="fas fa-star text-primary text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-800">Branding Basics</h3>
-                        </div>
-                        <p class="text-gray-600 mb-4">Simple branding techniques to make your restaurant stand out with minimal investment - from signage to packaging and customer experience.</p>
-                        <div class="flex items-center text-sm text-primary font-medium">
-                            <span>Starting from Ksh 4,000</span>
-                        </div>
-                    </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
+                         alt="Professional team meeting" 
+                         class="rounded-lg shadow-2xl max-w-md w-full">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                         alt="Hospitality Hospital Team" 
-                         class="rounded-xl shadow-lg w-full h-auto object-cover">
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-teal-900">About Anipulate Consulting Group</h2>
+                <p class="max-w-2xl mx-auto text-lg text-gray-600">
+                    We blend PR expertise, image consulting, and executive coaching to create transformative personal and professional brands that command attention and respect.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                         alt="Isaac Mbugua" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Isaac Mbugua</h3>
+                        <p class="text-amber-600 font-semibold mb-3">PR Expert</p>
+                        <p class="text-gray-600">With over 15 years in media relations and crisis communication, Isaac crafts narratives that position clients as industry leaders.</p>
+                    </div>
                 </div>
-                <div class="lg:w-1/2">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">About Hospitality Hospital</h2>
-                    <p class="text-gray-600 mb-4">Founded by food industry veterans who understand the unique challenges faced by restaurants and eateries, Hospitality Hospital was created to provide affordable, practical consulting services to help these businesses thrive.</p>
-                    <p class="text-gray-600 mb-6">We believe that every restaurant has the potential to grow into a successful, profitable business with the right guidance and strategies tailored to their specific needs and budget constraints.</p>
-                    
+                
+                <!-- Team Member 2 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80" 
+                         alt="Daisy Naitore" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Daisy Naitore</h3>
+                        <p class="text-amber-600 font-semibold mb-3">Image Consultant & Clinical Psychologist</p>
+                        <p class="text-gray-600">Daisy combines psychology with style expertise to create authentic personal brands that resonate emotionally with audiences.</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                         alt="Antony Kimani" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Antony Kimani</h3>
+                        <p class="text-amber-600 font-semibold mb-3">Social Media & Brand Strategist</p>
+                        <p class="text-gray-600">Antony builds digital presences that amplify thought leadership and create meaningful engagement with target audiences.</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1583864697784-a0efc8379f70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" 
+                         alt="Romeo Ndung'u" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Romeo Ndung'u</h3>
+                        <p class="text-amber-600 font-semibold mb-3">Tech Advisor & CTO</p>
+                        <p class="text-gray-600">Romeo ensures our strategies leverage cutting-edge technology to maximize reach and impact in today's digital landscape.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-teal-900">Our Strategic Services</h2>
+                <p class="max-w-2xl mx-auto text-lg text-gray-600">
+                    Comprehensive solutions tailored to elevate your professional presence and impact.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md service-card transition duration-300">
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-user-tie text-2xl text-teal-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Image Consulting</h3>
+                        <p class="text-gray-600 mb-4">
+                            Craft a powerful visual identity that communicates authority and approachability in every setting.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-teal-500 mt-1 mr-2"></i>
+                                <span>Executive styling & wardrobe strategy</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-teal-500 mt-1 mr-2"></i>
+                                <span>Brand presence development</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-teal-500 mt-1 mr-2"></i>
+                                <span>Personal brand color & style analysis</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md service-card transition duration-300">
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-bullhorn text-2xl text-teal-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">PR & Reputation Management</h3>
+                        <p class="text-gray-600 mb-4">
+                            Shape public perception and build credibility that opens doors to new opportunities.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-teal-500 mt-1 mr-2"></i>
+                                <span>Public positioning strategy</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-teal-500 mt-1 mr-2"></i>
+                                <span>Media training & interview preparation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-teal-500 mt-1 mr-2"></i>
+                                <span>Crisis communication planning</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md service-card transition duration-300">
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-chalkboard-teacher text-2xl text-teal-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Speaker & Leadership Coaching</h3>
+                        <p class="text-gray-600 mb-4">
+                            Develop the confidence and skills to captivate audiences and lead with impact.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-teal-500 mt-1 mr-2"></i>
+                                <span>Voice modulation & speech coaching</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-teal-500 mt-1 mr-2"></i>
+                                <span>Presentation skills development</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-teal-500 mt-1 mr-2"></i>
+                                <span>Media appearance preparation</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-teal-900">Success Stories</h2>
+                <p class="max-w-2xl mx-auto text-lg text-gray-600">
+                    Real transformations that demonstrate the power of strategic image consulting.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Case Study 1 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md testimonial-card">
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                                 alt="Client" 
+                                 class="w-16 h-16 rounded-full object-cover mr-4">
+                            <div>
+                                <h4 class="font-bold">James Kariuki</h4>
+                                <p class="text-gray-600">CEO, Fintech Startup</p>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-3">From Unknown Founder to Industry Thought Leader</h3>
+                            <p class="text-gray-600 mb-4">
+                                "Before working with Anipulate, I struggled with executive presence and media interviews. Their comprehensive approach transformed my public persona."
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-teal-100 text-teal-800 text-xs px-3 py-1 rounded-full">Image Consulting</span>
+                                <span class="bg-teal-100 text-teal-800 text-xs px-3 py-1 rounded-full">Media Training</span>
+                                <span class="bg-teal-100 text-teal-800 text-xs px-3 py-1 rounded-full">PR Strategy</span>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-gray-200">
+                            <h4 class="font-bold mb-2 text-amber-600">Results Achieved:</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-teal-500 mt-1 mr-2"></i>
+                                    <span>Featured in 3 major business publications within 6 months</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-teal-500 mt-1 mr-2"></i>
+                                    <span>300% increase in client inquiries from new leads</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-teal-500 mt-1 mr-2"></i>
+                                    <span>Improved board confidence and investor relations</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Case Study 2 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md testimonial-card">
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="Client" 
+                                 class="w-16 h-16 rounded-full object-cover mr-4">
+                            <div>
+                                <h4 class="font-bold">Dr. Wanjiku Mwangi</h4>
+                                <p class="text-gray-600">Healthcare Executive</p>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <h3 class="text-xl font-bold mb-3">Establishing Authority in a Competitive Field</h3>
+                            <p class="text-gray-600 mb-4">
+                                "Anipulate helped me transition from being just another doctor to a recognized expert in my specialty. Their strategic approach made all the difference."
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-teal-100 text-teal-800 text-xs px-3 py-1 rounded-full">Personal Branding</span>
+                                <span class="bg-teal-100 text-teal-800 text-xs px-3 py-1 rounded-full">Speaker Coaching</span>
+                                <span class="bg-teal-100 text-teal-800 text-xs px-3 py-1 rounded-full">Wardrobe Strategy</span>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border border-gray-200">
+                            <h4 class="font-bold mb-2 text-amber-600">Results Achieved:</h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-teal-500 mt-1 mr-2"></i>
+                                    <span>Invited as keynote speaker at 4 international conferences</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-teal-500 mt-1 mr-2"></i>
+                                    <span>Secured regular expert commentary on national TV</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-teal-500 mt-1 mr-2"></i>
+                                    <span>Increased private practice revenue by 40%</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation Section -->
+    <section id="consultation" class="py-20 bg-teal-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Professional Image?</h2>
+                    <p class="text-lg mb-6">
+                        Book a free 30-minute consultation with our experts to discuss your goals and how we can help you achieve them.
+                    </p>
                     <div class="space-y-4">
                         <div class="flex items-start">
-                            <div class="bg-green-100 p-2 rounded-full mr-4 mt-1">
-                                <i class="fas fa-check text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-800">Local Expertise</h4>
-                                <p class="text-gray-600">Our solutions are designed specifically for the Kenyan market and local consumer preferences.</p>
-                            </div>
+                            <i class="fas fa-check-circle text-amber-400 mt-1 mr-3"></i>
+                            <span>Personalized strategy session</span>
                         </div>
                         <div class="flex items-start">
-                            <div class="bg-green-100 p-2 rounded-full mr-4 mt-1">
-                                <i class="fas fa-check text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-800">Budget-Friendly</h4>
-                                <p class="text-gray-600">We offer tiered pricing to accommodate businesses of all sizes and financial capabilities.</p>
-                            </div>
+                            <i class="fas fa-check-circle text-amber-400 mt-1 mr-3"></i>
+                            <span>No obligation, no pressure</span>
                         </div>
                         <div class="flex items-start">
-                            <div class="bg-green-100 p-2 rounded-full mr-4 mt-1">
-                                <i class="fas fa-check text-primary"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-800">Practical Solutions</h4>
-                                <p class="text-gray-600">No theoretical fluff - just actionable advice you can implement immediately with your existing resources.</p>
-                            </div>
+                            <i class="fas fa-check-circle text-amber-400 mt-1 mr-3"></i>
+                            <span>Actionable insights you can use immediately</span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-16 bg-blue-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Restaurant Success Stories</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Hear from restaurant owners who transformed their businesses with our help</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="bg-white p-8 rounded-xl shadow-md testimonial-card">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-secondary font-bold mr-4">JM</div>
+                <div class="lg:w-1/2 bg-white rounded-lg shadow-xl p-8 text-gray-800">
+                    <h3 class="text-2xl font-bold mb-6 text-teal-900">Schedule Your Consultation</h3>
+                    <form id="consultationForm" class="space-y-4">
                         <div>
-                            <h4 class="font-bold text-gray-800">James Mwangi</h4>
-                            <p class="text-gray-500 text-sm">Restaurant Owner, Kawangware</p>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
                         </div>
-                    </div>
-                    <p class="text-gray-600 mb-4">"Hospitality Hospital helped me reorganize my menu and within a month my profits increased by 35%. Their advice was practical and easy to implement."</p>
-                    <div class="flex text-secondary">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 2 -->
-                <div class="bg-white p-8 rounded-xl shadow-md testimonial-card">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-secondary font-bold mr-4">WN</div>
                         <div>
-                            <h4 class="font-bold text-gray-800">Wanjiru Njoroge</h4>
-                            <p class="text-gray-500 text-sm">Eatery Owner, Dandora</p>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
                         </div>
-                    </div>
-                    <p class="text-gray-600 mb-4">"The recipe development service was worth every shilling! My customers keep coming back for the new dishes, and my food costs actually went down."</p>
-                    <div class="flex text-secondary">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 3 -->
-                <div class="bg-white p-8 rounded-xl shadow-md testimonial-card">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-secondary font-bold mr-4">KO</div>
                         <div>
-                            <h4 class="font-bold text-gray-800">Kevin Omondi</h4>
-                            <p class="text-gray-500 text-sm">Restaurant Owner, Kibera</p>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
                         </div>
-                    </div>
-                    <p class="text-gray-600 mb-4">"I was skeptical at first, but the efficiency training helped me serve twice as many customers during lunch hour without needing extra staff."</p>
-                    <div class="flex text-secondary">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
+                        <div>
+                            <label for="service" class="block text-gray-700 font-medium mb-2">Service of Interest</label>
+                            <select id="service" name="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
+                                <option value="">Select a service</option>
+                                <option value="image-consulting">Image Consulting</option>
+                                <option value="pr-management">PR & Reputation Management</option>
+                                <option value="speaker-coaching">Speaker & Leadership Coaching</option>
+                                <option value="comprehensive">Comprehensive Package</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                            Book My Free Consultation
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Simple, Affordable Pricing</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Choose the package that fits your restaurant's needs and budget</p>
+    <!-- Blog/Insights Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-teal-900">Insights & Resources</h2>
+                <p class="max-w-2xl mx-auto text-lg text-gray-600">
+                    Expert advice to help you navigate professional image and communication challenges.
+                </p>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <!-- Basic Plan -->
-                <div class="border border-gray-200 rounded-xl p-8 hover:border-primary transition duration-300">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Starter Package</h3>
-                    <p class="text-gray-600 mb-6">Perfect for new restaurants or those with very limited budgets</p>
-                    <div class="mb-6">
-                        <span class="text-4xl font-bold text-gray-800">Ksh 3,000</span>
-                        <span class="text-gray-500">/consultation</span>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Media interview" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-amber-600">PR STRATEGY</span>
+                        <h3 class="text-xl font-bold my-3">How to Prepare for a Media Interview</h3>
+                        <p class="text-gray-600 mb-4">
+                            Learn the key strategies to ensure you communicate your message effectively and maintain control during media appearances.
+                        </p>
+                        <a href="#" class="text-teal-600 font-medium hover:text-teal-800">Read More <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            <span>Basic menu analysis</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            <span>3 recipe suggestions</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            <span>1-hour consultation</span>
-                        </li>
-                        <li class="flex items-center text-gray-400">
-                            <i class="fas fa-times mr-2"></i>
-                            <span>No follow-up</span>
-                        </li>
-                    </ul>
-                    <a href="#contact" class="block text-center bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-secondary transition">Get Started</a>
                 </div>
                 
-                <!-- Popular Plan -->
-                <div class="border-2 border-secondary rounded-xl p-8 bg-blue-50 relative">
-                    <div class="absolute top-0 right-0 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">MOST POPULAR</div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Growth Package</h3>
-                    <p class="text-gray-600 mb-6">Best value for established restaurants looking to expand</p>
-                    <div class="mb-6">
-                        <span class="text-4xl font-bold text-gray-800">Ksh 8,000</span>
-                        <span class="text-gray-500">/month</span>
+                <!-- Article 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Business attire" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-amber-600">IMAGE CONSULTING</span>
+                        <h3 class="text-xl font-bold my-3">Dressing for the Boardroom: A Guide for Executives</h3>
+                        <p class="text-gray-600 mb-4">
+                            Discover how to build a professional wardrobe that communicates authority while staying authentic to your personal style.
+                        </p>
+                        <a href="#" class="text-teal-600 font-medium hover:text-teal-800">Read More <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            <span>Complete menu makeover</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            <span>10 customized recipes</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            <span>Cost control strategies</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            <span>2 follow-up sessions</span>
-                        </li>
-                    </ul>
-                    <a href="#contact" class="block text-center bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-secondary transition">Get Started</a>
                 </div>
                 
-                <!-- Premium Plan -->
-                <div class="border border-gray-200 rounded-xl p-8 hover:border-primary transition duration-300">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Premium Package</h3>
-                    <p class="text-gray-600 mb-6">For restaurants ready to transform into premium establishments</p>
-                    <div class="mb-6">
-                        <span class="text-4xl font-bold text-gray-800">Ksh 15,000</span>
-                        <span class="text-gray-500">/month</span>
+                <!-- Article 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                         alt="Crisis management" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-amber-600">CRISIS MANAGEMENT</span>
+                        <h3 class="text-xl font-bold my-3">Navigating Crisis PR in Kenya: A Practical Guide</h3>
+                        <p class="text-gray-600 mb-4">
+                            Essential steps to protect and rebuild your reputation when facing public relations challenges in the Kenyan context.
+                        </p>
+                        <a href="#" class="text-teal-600 font-medium hover:text-teal-800">Read More <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            <span>Complete business assessment</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            <span>Unlimited recipe development</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            <span>Staff training</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            <span>Weekly check-ins</span>
-                        </li>
-                    </ul>
-                    <a href="#contact" class="block text-center bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-secondary transition">Get Started</a>
                 </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                    View All Articles <i class="fas fa-arrow-right ml-2"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-16 bg-primary text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Restaurant?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">Join dozens of other restaurants and eateries that have increased their profits with our affordable consulting services</p>
-            <a href="#contact" class="inline-block bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 shadow-lg">Contact Us Today</a>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Get In Touch</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Have questions? Ready to get started? Reach out to us today!</p>
-            </div>
-            
-            <div class="flex flex-col lg:flex-row gap-12 max-w-6xl mx-auto">
-                <div class="lg:w-1/2">
-                    
-<form method="POST" action="https://formsubmit.co/izaq.githaiga@gmail.com" class="space-y-6">
-    <input type="hidden" name="_captcha" value="false">
-    <div>
-        <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
-        <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
-    </div>
-    <div>
-        <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
-        <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
-    </div>
-    <div>
-        <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
-        <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
-    </div>
-    <div>
-        <label for="service" class="block text-gray-700 font-medium mb-2">Service Interested In</label>
-        <select id="service" name="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
-            <option value="">Select a service</option>
-            <option value="menu">Menu Optimization</option>
-            <option value="recipe">Recipe Development</option>
-            <option value="cost">Cost Control</option>
-            <option value="customers">Customer Attraction</option>
-            <option value="efficiency">Efficiency Training</option>
-            <option value="branding">Branding Basics</option>
-        </select>
-    </div>
-    <div>
-        <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
-        <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"></textarea>
-    </div>
-    <button type="submit" class="w-full bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-secondary transition">Send Message</button>
-</form>
-
-                </div>
-                
-                <div class="lg:w-1/2">
-                    <div class="bg-gray-50 p-8 rounded-xl h-full">
-                        <h3 class="text-xl font-bold text-gray-800 mb-6">Contact Information</h3>
-                        
-                        <div class="space-y-6">
-                            <div class="flex items-start">
-                                <div class="bg-blue-100 p-3 rounded-full mr-4">
-                                    <i class="fas fa-phone text-secondary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-800">Call Us</h4>
-                                    <a href="tel:0756320394" class="text-gray-600 hover:text-primary transition">+254 756 320 394</a>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="bg-blue-100 p-3 rounded-full mr-4">
-                                    <i class="fas fa-envelope text-secondary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-800">Email Us</h4>
-                                    <a href="mailto:izaq.githaiga@gmail.com" class="text-gray-600 hover:text-primary transition">izaq.githaiga@gmail.com</a>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="bg-blue-100 p-3 rounded-full mr-4">
-                                    <i class="fas fa-map-marker-alt text-secondary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-800">Visit Us</h4>
-                                    <p class="text-gray-600">Nairobi, Kenya<br>By appointment only</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="bg-blue-100 p-3 rounded-full mr-4">
-                                    <i class="fas fa-clock text-secondary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-800">Working Hours</h4>
-                                    <p class="text-gray-600">Monday - Friday: 8am - 5pm<br>Saturday: 9am - 2pm<br>Sunday: Closed</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-8">
-                            <h4 class="font-bold text-gray-800 mb-4">Follow Us</h4>
-                            <div class="flex space-x-4">
-                                <a href="https://facebook.com/CarrotBlu" class="bg-gray-200 p-3 rounded-full text-gray-700 hover:bg-primary hover:text-white transition">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#" class="bg-gray-200 p-3 rounded-full text-gray-700 hover:bg-primary hover:text-white transition">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="#" class="bg-gray-200 p-3 rounded-full text-gray-700 hover:bg-primary hover:text-white transition">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="#" class="bg-gray-200 p-3 rounded-full text-gray-700 hover:bg-primary hover:text-white transition">
-                                    <i class="fab fa-whatsapp"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Answers to common questions about our restaurant consulting services</p>
-            </div>
-            
-            <div class="max-w-3xl mx-auto space-y-6">
-                <!-- FAQ 1 -->
-                <div class="bg-white p-6 rounded-xl shadow-md">
-                    <button class="flex justify-between items-center w-full text-left focus:outline-none" onclick="toggleFAQ(1)">
-                        <h3 class="text-lg font-bold text-gray-800">How quickly will I see results after implementing your recommendations?</h3>
-                        <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-1"></i>
-                    </button>
-                    <div class="mt-4 text-gray-600 hidden" id="faq-content-1">
-                        Most of our restaurant clients report noticeable improvements within 2-4 weeks of implementing our recommendations. The exact timeline depends on which services you use and how quickly you can implement the changes. Menu optimizations tend to show the fastest results, often within the first week.
-                    </div>
-                </div>
-                
-                <!-- FAQ 2 -->
-                <div class="bg-white p-6 rounded-xl shadow-md">
-                    <button class="flex justify-between items-center w-full text-left focus:outline-none" onclick="toggleFAQ(2)">
-                        <h3 class="text-lg font-bold text-gray-800">Do you offer any money-back guarantee?</h3>
-                        <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-2"></i>
-                    </button>
-                    <div class="mt-4 text-gray-600 hidden" id="faq-content-2">
-                        While we don't offer a traditional money-back guarantee, we're committed to your success. If after implementing our recommendations you don't see any improvement, we'll work with you at no additional cost to refine the strategies until you're satisfied. Our goal is your success.
-                    </div>
-                </div>
-                
-                <!-- FAQ 3 -->
-                <div class="bg-white p-6 rounded-xl shadow-md">
-                    <button class="flex justify-between items-center w-full text-left focus:outline-none" onclick="toggleFAQ(3)">
-                        <h3 class="text-lg font-bold text-gray-800">Can you help with licensing and health department requirements?</h3>
-                        <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-3"></i>
-                    </button>
-                    <div class="mt-4 text-gray-600 hidden" id="faq-content-3">
-                        Yes! We provide guidance on navigating the licensing process and maintaining health department compliance. We can advise on proper food handling procedures, facility requirements, and documentation needed for your restaurant to operate legally and safely.
-                    </div>
-                </div>
-                
-                <!-- FAQ 4 -->
-                <div class="bg-white p-6 rounded-xl shadow-md">
-                    <button class="flex justify-between items-center w-full text-left focus:outline-none" onclick="toggleFAQ(4)">
-                        <h3 class="text-lg font-bold text-gray-800">How do your services work if my restaurant is in a rural area?</h3>
-                        <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-4"></i>
-                    </button>
-                    <div class="mt-4 text-gray-600 hidden" id="faq-content-4">
-                        We serve clients throughout Kenya, including rural areas. For remote locations, we conduct consultations via phone or video call, and we tailor our recommendations to account for local ingredient availability, customer preferences, and market conditions specific to your area.
-                    </div>
-                </div>
-                
-                <!-- FAQ 5 -->
-                <div class="bg-white p-6 rounded-xl shadow-md">
-                    <button class="flex justify-between items-center w-full text-left focus:outline-none" onclick="toggleFAQ(5)">
-                        <h3 class="text-lg font-bold text-gray-800">What makes your services different from other business consultants?</h3>
-                        <i class="fas fa-chevron-down text-primary transition-transform duration-300" id="faq-icon-5"></i>
-                    </button>
-                    <div class="mt-4 text-gray-600 hidden" id="faq-content-5">
-                        Unlike general business consultants, we specialize exclusively in restaurants and eateries. Our team has hands-on experience running successful food businesses at this scale. We focus on practical, immediately implementable solutions that don't require large investments - perfect for businesses with limited budgets.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <!-- Contact & Footer -->
+    <footer id="contact" class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
                 <div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <i class="fas fa-utensils text-2xl text-primary"></i>
-                        <span class="text-xl font-bold">Hospitality Hospital</span>
-                    </div>
-                    <p class="text-gray-400">Helping restaurants and eateries thrive with affordable, practical consulting services tailored to their unique needs and budgets.</p>
+                    <h3 class="text-xl font-bold mb-4">ANIPULATE</h3>
+                    <p class="text-gray-400">
+                        Image with Strategic Intent. Helping professionals and brands craft presence that commands respect and delivers results.
+                    </p>
                 </div>
                 
                 <div>
                     <h4 class="text-lg font-bold mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-400 hover:text-primary transition">Home</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-primary transition">Services</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-primary transition">About Us</a></li>
-                        <li><a href="#testimonials" class="text-gray-400 hover:text-primary transition">Success Stories</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-primary transition">Contact</a></li>
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#case-studies" class="text-gray-400 hover:text-white">Case Studies</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h4 class="text-lg font-bold mb-4">Services</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Menu Optimization</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Recipe Development</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Cost Control</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Customer Attraction</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-primary transition">Efficiency Training</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Image Consulting</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">PR & Reputation Management</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Speaker & Leadership Coaching</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Media Training</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Crisis Communication</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-bold mb-4">Contact Info</h4>
-                    <ul class="space-y-2">
-                        <li class="flex items-center">
-                            <i class="fas fa-phone-alt text-primary mr-2"></i>
-                            <a href="tel:0756320394" class="text-gray-400 hover:text-primary transition">+254 756 320 394</a>
+                    <h4 class="text-lg font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-amber-400"></i>
+                            <span>izaq.githaiga@gmail.com</span>
                         </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope text-primary mr-2"></i>
-                            <a href="mailto:izaq.githaiga@gmail.com" class="text-gray-400 hover:text-primary transition">izaq.githaiga@gmail.com</a>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3 text-amber-400"></i>
+                            <span>+254 756 320 394</span>
                         </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-map-marker-alt text-primary mr-2"></i>
-                            <span class="text-gray-400">Nairobi, Kenya</span>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-amber-400"></i>
+                            <span>Nairobi, Kenya</span>
                         </li>
                     </ul>
-                    
-                    <div class="mt-4">
-                        <h5 class="font-bold mb-2">Follow Us</h5>
-                        <div class="flex space-x-3">
-                            <a href="#" class="bg-gray-700 p-2 rounded-full text-white hover:bg-primary transition">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="bg-gray-700 p-2 rounded-full text-white hover:bg-primary transition">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="bg-gray-700 p-2 rounded-full text-white hover:bg-primary transition">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="bg-gray-700 p-2 rounded-full text-white hover:bg-primary transition">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                        </div>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
                     </div>
                 </div>
             </div>
             
-            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2023 Hospitality Hospital. All rights reserved.</p>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2023 Anipulate Consulting Group. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+        <a href="https://wa.me/254756320394" class="bg-green-500 hover:bg-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg transition duration-300">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
     <script>
         // Mobile menu toggle
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
         
-        // FAQ toggle function
-        function toggleFAQ(id) {
-            const content = document.getElementById(`faq-content-${id}`);
-            const icon = document.getElementById(`faq-icon-${id}`);
+        // Form submission
+        const consultationForm = document.getElementById('consultationForm');
+        
+        consultationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
             
-            content.classList.toggle('hidden');
-            icon.classList.toggle('rotate-180');
-        }
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            
+            // Here you would typically send this data to your server
+            // For now, we'll just show an alert
+            alert(`Thank you, ${name}! We've received your consultation request for ${service}. We'll contact you shortly at ${email} or ${phone}.`);
+            
+            // Reset form
+            consultationForm.reset();
+        });
         
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    const mobileMenu = document.getElementById('mobile-menu');
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
-                }
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
-        });
-        
-        // Add animation class when elements come into view
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-        
-        document.querySelectorAll('.service-card, .testimonial-card').forEach(card => {
-            observer.observe(card);
         });
     </script>
-
-<!-- WhatsApp Chat Button -->
-<a href="https://wa.me/254756320394" class="fixed bottom-6 right-6 bg-green-500 text-white rounded-full p-4 shadow-lg z-50 hover:bg-green-600 transition" target="_blank" aria-label="Chat on WhatsApp">
-    <i class="fab fa-whatsapp text-2xl"></i>
-</a>
 </body>
 </html>
