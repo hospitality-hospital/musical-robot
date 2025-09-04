@@ -1,155 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sembuse Sambusa — Fresh Samosas in Nairobi</title>
-  <meta name="description" content="Sembuse Sambusa: Nairobi's tastiest samosas — Dengu at KES 10, Potato-Chicken at KES 15. Hot & fresh daily. Order on WhatsApp with delivery to nearby markets, offices, estates, and catering for events." />
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .fade-in { animation: fade 0.5s ease both; }
-    @keyframes fade { from {opacity: 0; transform: translateY(6px)} to {opacity:1; transform:translateY(0)} }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samosa Delight</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        header {
+            background-color: #ff9900;
+            color: white;
+            text-align: center;
+            padding: 2em;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            background-color: #333;
+            padding: 1em;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1em;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #ff9900;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .about, .menu, .contact {
+            margin-bottom: 40px;
+        }
+        .about h2, .menu h2, .contact h2 {
+            color: #ff9900;
+            text-align: center;
+        }
+        .menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .menu-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 15px;
+            width: 250px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .menu-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .contact input, .contact textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact button {
+            background-color: #ff9900;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .contact button:hover {
+            background-color: #e68a00;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            nav a {
+                display: block;
+                margin: 0.5em 0;
+            }
+            .menu-item {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-800">
-<script>
-  const WHATSAPP_NUMBER = '254756320394';
-  function quickOrder(item, qty) {
-    let msg = `Hello Sembuse Sambusa! I'd like to order ${qty} ${item}(s).`;
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
-  }
-  function openOrderModal(){
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hi! I want to order samosas.')}`, '_blank');
-  }
-</script>
-
-<!-- Header -->
-<header class="sticky top-0 z-40 bg-gradient-to-r from-green-600 via-yellow-400 to-green-700 text-white">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-    <span class="font-bold text-lg">Sembuse Sambusa</span>
-    <nav class="hidden md:flex gap-6 text-sm">
-      <a href="#menu" class="hover:text-blue-100">Menu</a>
-      <a href="#offers" class="hover:text-blue-100">Offers</a>
-      <a href="#delivery" class="hover:text-blue-100">Delivery</a>
-      <a href="#catering" class="hover:text-blue-100">Catering</a>
-      <a href="#reviews" class="hover:text-blue-100">Reviews</a>
-      <a href="#contact" class="hover:text-blue-100">Contact</a>
+<body>
+    <header>
+        <h1>Samosa Delight</h1>
+        <p>Your one-stop shop for delicious, crispy samosas!</p>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
     </nav>
-    <button onclick="openOrderModal()" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-xl">Order Now</button>
-  </div>
-</header>
-
-<!-- Hero -->
-<section id="home" class="bg-gradient-to-r from-green-500 via-yellow-400 to-green-600 py-16">
-  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
-    <div class="fade-in text-white">
-      <h1 class="text-4xl font-extrabold">Fresh, Hot & Crispy Samosas</h1>
-      <p class="mt-3 text-lg">🥟 Dengu @ <b>10/=</b> • 🥔🍗 Potato-Chicken @ <b>15/=</b>. Delivered to your office, estate or market.</p>
-      <div class="mt-6 flex gap-3">
-        <button onclick="openOrderModal()" class="bg-red-500 hover:bg-red-600 px-5 py-3 rounded-xl">Order on WhatsApp</button>
-        <a href="#menu" class="bg-blue-500 hover:bg-blue-600 px-5 py-3 rounded-xl">See Menu</a>
-      </div>
-      <p class="mt-4 text-sm">🚚 Free delivery on orders above <b>KES 200</b>.</p>
+    <div class="container">
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <p>Welcome to Samosa Delight! We craft mouth-watering samosas with authentic recipes and fresh ingredients. Whether you love spicy, savory, or sweet, we have a samosa for every palate. Visit us for a delightful experience!</p>
+        </section>
+        <section id="menu" class="menu">
+            <h2>Our Menu</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/250x150?text=Spicy+Beef+Samosa" alt="Spicy Beef Samosa">
+                    <h3>Spicy Beef Samosa</h3>
+                    <p>Juicy beef filling with a kick of spice, wrapped in crispy pastry.</p>
+                    <p><strong>$2.50</strong></p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/250x150?text=Veggie+Samosa" alt="Veggie Samosa">
+                    <h3>Veggie Samosa</h3>
+                    <p>Fresh vegetables and aromatic spices in a golden crust.</p>
+                    <p><strong>$2.00</strong></p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/250x150?text=Chicken+Samosa" alt="Chicken Samosa">
+                    <h3>Chicken Samosa</h3>
+                    <p>Tender chicken with a blend of traditional spices.</p>
+                    <p><strong>$2.75</strong></p>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
     </div>
-    <img src="/images/hero-samosa.jpg" alt="Fresh Kenyan samosas" class="w-full rounded-3xl shadow-xl" loading="eager" />
-  </div>
-</section>
-
-<!-- Menu -->
-<section id="menu" class="max-w-7xl mx-auto px-4 py-14">
-  <h2 class="text-3xl font-bold text-green-700">Our Menu</h2>
-  <p class="text-slate-600">Simple. Fresh. Affordable.</p>
-  <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-    <article class="bg-white rounded-2xl p-5 border border-slate-200">
-      <img src="/images/dengu.jpg" alt="Dengu samosas" class="rounded-xl h-44 w-full object-cover" loading="lazy" />
-      <div class="mt-3 flex justify-between">
-        <h3 class="font-bold">Dengu Samosa</h3>
-        <span class="bg-yellow-300 px-3 py-1 rounded-lg">KES 10</span>
-      </div>
-      <p class="text-sm text-slate-600">Green grams with potato & fresh spring onions.</p>
-      <div class="mt-3 flex gap-2">
-        <button onclick="quickOrder('Dengu Samosa',5)" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-xl">5 for 50</button>
-        <button onclick="quickOrder('Dengu Samosa',10)" class="bg-white border px-4 py-2 rounded-xl hover:bg-slate-50">10 for 100</button>
-      </div>
-    </article>
-
-    <article class="bg-white rounded-2xl p-5 border border-slate-200">
-      <img src="/images/potato-chicken.jpg" alt="Potato chicken samosas" class="rounded-xl h-44 w-full object-cover" loading="lazy" />
-      <div class="mt-3 flex justify-between">
-        <h3 class="font-bold">Potato-Chicken Samosa</h3>
-        <span class="bg-yellow-300 px-3 py-1 rounded-lg">KES 15</span>
-      </div>
-      <p class="text-sm text-slate-600">Potato, chicken, dania & onions. Rich flavour.</p>
-      <div class="mt-3 flex gap-2">
-        <button onclick="quickOrder('Potato-Chicken Samosa',5)" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-xl">5 for 75</button>
-        <button onclick="quickOrder('Potato-Chicken Samosa',10)" class="bg-white border px-4 py-2 rounded-xl hover:bg-slate-50">10 for 150</button>
-      </div>
-    </article>
-  </div>
-</section>
-
-<!-- Catering -->
-<section id="catering" class="bg-green-50 py-14">
-  <div class="max-w-5xl mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold text-green-700">Catering & Bulk Orders</h2>
-    <p class="mt-2 text-slate-700">Hosting an event, office party, or family gathering? Let Sembuse Sambusa handle the snacks.</p>
-    <div class="mt-8 grid md:grid-cols-3 gap-6">
-      <div class="bg-white rounded-2xl shadow p-6">
-        <h3 class="font-bold text-xl">50 Samosas</h3>
-        <p class="text-slate-600 mt-2">Perfect for small groups & meetings.</p>
-        <p class="font-bold text-yellow-600 mt-3">From KES 500</p>
-        <button onclick="quickOrder('Bulk Order (50 Samosas)',50)" class="mt-4 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-xl">Order Now</button>
-      </div>
-      <div class="bg-white rounded-2xl shadow p-6">
-        <h3 class="font-bold text-xl">100 Samosas</h3>
-        <p class="text-slate-600 mt-2">Great for office lunches or birthdays.</p>
-        <p class="font-bold text-yellow-600 mt-3">From KES 1,000</p>
-        <button onclick="quickOrder('Bulk Order (100 Samosas)',100)" class="mt-4 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-xl">Order Now</button>
-      </div>
-      <div class="bg-white rounded-2xl shadow p-6">
-        <h3 class="font-bold text-xl">200+ Samosas</h3>
-        <p class="text-slate-600 mt-2">Weddings, church events, large parties.</p>
-        <p class="font-bold text-yellow-600 mt-3">Custom Pricing</p>
-        <button onclick="quickOrder('Bulk Order (200+ Samosas)',200)" class="mt-4 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-xl">Enquire</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Delivery -->
-<section id="delivery" class="bg-blue-50 py-14">
-  <div class="max-w-4xl mx-auto px-4 text-center">
-    <h2 class="text-2xl font-bold text-blue-600">Delivery</h2>
-    <p class="mt-2 text-slate-700">We deliver across Nairobi: markets, estates & offices. Free delivery for orders above 200/=, small delivery fee otherwise.</p>
-  </div>
-</section>
-
-<!-- Reviews -->
-<section id="reviews" class="max-w-7xl mx-auto px-4 py-14">
-  <h2 class="text-2xl font-bold text-green-700">What Customers Say</h2>
-  <div class="mt-6 grid md:grid-cols-3 gap-6">
-    <blockquote class="bg-white p-5 rounded-xl shadow">“Best samosas in town, full of flavour!” – Jane, Nairobi</blockquote>
-    <blockquote class="bg-white p-5 rounded-xl shadow">“Affordable & fresh. I order daily for the office.” – Peter, Westlands</blockquote>
-    <blockquote class="bg-white p-5 rounded-xl shadow">“The potato-chicken is unbeatable. My kids love them.” – Aisha, South B</blockquote>
-  </div>
-</section>
-
-<!-- Contact -->
-<section id="contact" class="bg-gradient-to-r from-yellow-400 to-red-500 py-14 text-white">
-  <div class="max-w-4xl mx-auto px-4">
-    <h2 class="text-2xl font-bold">Contact Us</h2>
-    <p class="mt-2">Got a question or a big order? Drop us a message.</p>
-    <form action="https://formspree.io/f/mzzppwzz" method="POST" class="mt-6 grid gap-4">
-      <input type="text" name="name" placeholder="Your Name" required class="px-4 py-3 rounded-xl text-slate-800">
-      <input type="email" name="email" placeholder="Your Email" required class="px-4 py-3 rounded-xl text-slate-800">
-      <textarea name="message" placeholder="Message" rows="4" required class="px-4 py-3 rounded-xl text-slate-800"></textarea>
-      <button type="submit" class="bg-green-600 hover:bg-green-700 px-5 py-3 rounded-xl">Send</button>
-    </form>
-  </div>
-</section>
-
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/254756320394?text=Hi%20Sembuse%20Sambusa!%20I'd%20like%20to%20order." class="fixed bottom-5 right-5 bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-full shadow-lg flex items-center gap-2">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24"><path d="M20 3.94A11.89 11.89 0 0012 0a
+    <footer>
+        <p>&copy; 2025 Samosa Delight. All rights reserved.</p>
+        <p>123 Samosa Street, Food City | Phone: (123) 456-7890 | Email: info@samosadelight.com</p>
+    </footer>
+</body>
+</html>
