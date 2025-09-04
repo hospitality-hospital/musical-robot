@@ -4,14 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sembuse Sambusa — Fresh, Crispy, Deadly-Deadly Samosas in Kenya</title>
-  <meta name="description" content="Sembuse Sambusa serves fresh, crispy samosas across Kenya — veg (dengu + assorted veg) and non-veg (potato + chicken). Order on WhatsApp. Catering available." />
+  <meta name="description" content="Sembuse Sambusa serves fresh, crispy samosas across Kenya — veg (dengu + assorted veg) and non-veg (potato + chicken). Order on WhatsApp or pay via M-Pesa." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path fill='%23f59e0b' d='M32 6l26 45H6z'/></svg>">
-  <!-- Open Graph -->
-  <meta property="og:title" content="Sembuse Sambusa" />
-  <meta property="og:description" content="Veg & Non-Veg samosas. Order on WhatsApp. Catering for ruracio, parties, and events." />
-  <meta property="og:type" content="website" />
 
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -19,19 +15,25 @@
         extend: {
           colors: {
             brand: {
-              green: '#16a34a', // green-600
-              yellow: '#f59e0b', // amber-500
-              red: '#ef4444' // red-500
+              green: '#16a34a',
+              yellow: '#f59e0b',
+              red: '#ef4444'
             }
           }
         }
       }
     }
   </script>
+
   <style>
-    /* Scroll-reveal baseline state */
+    /* small glue styles for logo triangle and reveal */
     .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
+    /* simple CSS triangle to act as the 'A' in Sambusa */
+    .logo-tri { display:inline-block; width:0; height:0; border-left:8px solid transparent; border-right:8px solid transparent; border-bottom:16px solid #f59e0b; margin:0 6px; transform:translateY(3px); }
+    /* subtle image hover */
+    .img-zoom { transition: transform .45s ease; }
+    .img-zoom:hover { transform: scale(1.05); }
   </style>
 
   <!-- Local Business JSON-LD -->
@@ -40,55 +42,34 @@
     "@context": "https://schema.org",
     "@type": "FoodEstablishment",
     "name": "Sembuse Sambusa",
-    "image": "",
-    "servesCuisine": "Kenyan, Snacks",
-    "url": "",
+    "description": "Fresh samosas — Veg (dengu + veg) KSh 10 and Non-Veg (potato + chicken) KSh 15. Order on WhatsApp or pay via M-Pesa.",
     "telephone": "+254756320394",
     "priceRange": "KSh 10-15",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "KE"
-    },
-    "email": "izaq.githaiga@gmail.com",
-    "sameAs": []
+    "address": { "@type": "PostalAddress", "addressCountry": "KE" },
+    "email": "izaq.githaiga@gmail.com"
   }
   </script>
 </head>
 <body class="min-h-screen bg-gradient-to-b from-white via-amber-50 to-emerald-50 text-slate-800 antialiased">
-  <!-- Floating WhatsApp CTA -->
+  <!-- WhatsApp CTA -->
   <a id="wa-fab" href="https://wa.me/254756320394?text=Habari%20Sembuse%20Sambusa!" class="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full bg-brand-green px-4 py-3 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition" aria-label="Chat on WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.1 1.6 5.89L0 24l6.28-1.64A12 12 0 1020.52 3.48zM12 22c-1.91 0-3.73-.5-5.34-1.46l-.38-.22-3.25.85.87-3.17-.24-.39A9.96 9.96 0 1122 12c0 5.52-4.48 10-10 10z"/><path d="M17.47 14.51c-.27-.14-1.6-.79-1.84-.88-.25-.09-.43-.14-.62.14-.18.27-.71.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.2-1.33-.81-.72-1.36-1.6-1.52-1.87-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.62-1.5-.85-2.05-.22-.53-.44-.46-.62-.47l-.53-.01c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29s.99 2.66 1.13 2.85c.14.18 1.95 2.97 4.72 4.17.66.29 1.18.46 1.58.59.66.21 1.26.18 1.73.11.53-.08 1.6-.65 1.83-1.28.23-.64.23-1.19.16-1.28-.06-.09-.24-.14-.5-.27z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.1 1.6 5.89L0 24l6.28-1.64A12 12 0 1020.52 3.48zM12 22c-1.91 0-3.73-.5-5.34-1.46l-.38-.22-3.25.85.87-3.17-.24-.39A9.96 9.96 0 1122 12c0 5.52-4.48 10-10 10z"/><path d="M17.47 14.51c-.27-.14-1.6-.79-1.84-.88-.25-.09-.43-.14-.62.14-.18.27-.71.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.2-1.33-.81-.72-1.36-1.6-1.52-1.87-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.62-1.5-.85-2.05-.22-.53-.44-.46-.62-.47l-.53-.01c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29s.99 2.66 1.13 2.85c.14.18 1.95 2.97 4.72 4.17.66.29 1.18.46 1.58.59.66.21 1.26.18 1.73.11.53-.08 1.6-.65 1.83-1.28.23-.64.23-1.19.16-1.28-.06-.09-.24-.14-.5-.27z"/></svg>
     <span class="hidden sm:inline text-white font-semibold">WhatsApp</span>
   </a>
 
-  <!-- Header / Hero -->
+  <!-- Header -->
   <header class="relative overflow-hidden">
-    <div class="absolute -top-20 -left-20 h-64 w-64 rotate-12 bg-brand-yellow/30 blur-3xl rounded-full"></div>
-    <div class="absolute -bottom-16 -right-10 h-72 w-72 -rotate-6 bg-brand-red/20 blur-3xl rounded-full"></div>
-
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
-      <a href="#" class="flex items-center gap-3">
-        <!-- SVG Logo: Sembuse over Sambusa with triangle 'A's -->
-        <svg aria-label="Sembuse Sambusa logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" class="h-12 w-auto">
-          <defs>
-            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#16a34a"/>
-              <stop offset="50%" stop-color="#f59e0b"/>
-              <stop offset="100%" stop-color="#ef4444"/>
-            </linearGradient>
-          </defs>
-          <text x="50%" y="40" text-anchor="middle" font-size="34" font-family="Arial, Helvetica, sans-serif" fill="url(#g)" font-weight="700">Sembuse</text>
-          <!-- Sambusa row; replace A's with triangles -->
-          <text x="50%" y="95" text-anchor="middle" font-size="44" font-family="Arial, Helvetica, sans-serif" fill="#111827" font-weight="800">S</text>
-          <!-- Triangle A -->
-          <path d="M183 70 L195 98 L171 98 Z" fill="#f59e0b"/>
-          <text x="205" y="95" font-size="44" font-family="Arial, Helvetica, sans-serif" fill="#111827" font-weight="800">mb</text>
-          <!-- Triangle A -->
-          <path d="M265 70 L277 98 L253 98 Z" fill="#f59e0b"/>
-          <text x="287" y="95" font-size="44" font-family="Arial, Helvetica, sans-serif" fill="#111827" font-weight="800">us</text>
-          <text x="345" y="95" font-size="44" font-family="Arial, Helvetica, sans-serif" fill="#111827" font-weight="800">a</text>
-        </svg>
+      <a href="#" class="flex items-center gap-4">
+        <!-- Clean HTML logo: Sembuse above Sambusa with triangle A's -->
+        <div class="text-left">
+          <div class="text-sm md:text-base font-bold text-brand-green">Sembuse</div>
+          <div class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
+            S<span class="logo-tri" aria-hidden="true"></span>mb<span class="logo-tri" aria-hidden="true"></span>us<span class="ml-1">a</span>
+          </div>
+        </div>
       </a>
+
       <div class="hidden md:flex items-center gap-6 text-sm font-semibold">
         <a href="#about" class="hover:text-brand-green transition">About</a>
         <a href="#menu" class="hover:text-brand-yellow transition">Menu</a>
@@ -100,27 +81,20 @@
     <section class="mx-auto max-w-7xl px-4 py-14 md:py-24">
       <div class="grid items-center gap-10 md:grid-cols-2">
         <div class="reveal">
-          <h1 class="text-4xl md:text-6xl font-black leading-tight">
-            Fresh & Crispy <span class="text-brand-green">Samosas</span>
-          </h1>
-          <p class="mt-4 text-lg md:text-xl text-slate-700">
-            Kama unapenda ugali — <span class="font-semibold">Sembuse Sambusa, deadly deadly!</span> 
-            Veg (dengu + veg) & Non-veg (potato + chicken). Perfect for lunch, parties, and <span class="whitespace-nowrap">ruracio.</span>
-          </p>
+          <h1 class="text-4xl md:text-6xl font-black leading-tight">Fresh & Crispy <span class="text-brand-green">Samosas</span></h1>
+          <p class="mt-4 text-lg md:text-xl text-slate-700">Kama unapenda ugali — <span class="font-semibold">Sembuse Sambusa, deadly deadly!</span> Veg (dengu + veg) & Non-veg (potato + chicken). Perfect for lunch, parties, and ruracio.</p>
           <div class="mt-6 flex flex-wrap gap-3">
             <a href="#menu" class="inline-flex items-center rounded-xl bg-brand-green px-5 py-3 text-white font-semibold shadow hover:shadow-lg hover:-translate-y-0.5 transition">View Menu</a>
-            <a href="#order" class="inline-flex items-center rounded-xl border border-brand-green px-5 py-3 font-semibold hover:bg-brand-green/10 hover:-translate-y-0.5 transition">Order Now</a>
+            <a href="#order" class="inline-flex items-center rounded-xl border border-brand-green px-5 py-3 font-semibold hover:bg-brand-green/10 transition">Order Now</a>
           </div>
         </div>
+
         <div class="reveal">
-          <!-- Decorative hero image substitute with triangles -->
-          <div class="relative mx-auto h-64 w-64 md:h-80 md:w-80">
-            <div class="absolute inset-0 animate-pulse rounded-[2rem] bg-gradient-to-br from-amber-200 via-emerald-200 to-red-200 blur-sm"></div>
-            <svg viewBox="0 0 200 200" class="relative h-full w-full">
-              <polygon points="100,10 190,190 10,190" class="fill-amber-400" />
-              <polygon points="150,50 175,150 75,150" class="fill-emerald-500 opacity-90" />
-              <polygon points="50,80 120,180 20,180" class="fill-red-500 opacity-90" />
-            </svg>
+          <!-- Gallery preview using Unsplash source (lazy) -->
+          <div class="grid grid-cols-3 gap-3">
+            <img loading="lazy" alt="Tantalising samosa closeup" src="https://source.unsplash.com/600x600/?samosa" class="rounded-2xl object-cover h-32 w-full img-zoom shadow-sm"/>
+            <img loading="lazy" alt="Samosas with chutney" src="https://source.unsplash.com/600x600/?samosa,chutney" class="rounded-2xl object-cover h-32 w-full img-zoom shadow-sm"/>
+            <img loading="lazy" alt="Samosa platter" src="https://source.unsplash.com/600x600/?samosas,platter" class="rounded-2xl object-cover h-32 w-full img-zoom shadow-sm"/>
           </div>
         </div>
       </div>
@@ -132,9 +106,8 @@
     <div class="grid gap-8 md:grid-cols-2">
       <div>
         <h2 class="text-3xl md:text-4xl font-extrabold">About Us</h2>
-        <p class="mt-4 leading-relaxed text-slate-700">Welcome to <span class="font-semibold">Sembuse Sambusa</span> — a proudly Kenyan kitchen bringing you 
-          perfectly spiced, crispy-edge samosas. We keep it simple: honest ingredients, hot oil, and love. 
-          Catering available for weddings, <span class="whitespace-nowrap">ruracio,</span> and corporate events.</p>
+        <p class="mt-4 leading-relaxed text-slate-700">Welcome to <span class="font-semibold">Sembuse Sambusa</span> — a proudly Kenyan kitchen bringing you perfectly spiced, crispy-edge samosas. We keep it simple: honest ingredients, hot oil, and love. Catering available for weddings, ruracio, and corporate events.</p>
+        <p class="mt-3 text-sm text-slate-600 italic">(Sembuse: a playful twist — kama unapenda ugali, ungependa sambusa yetu — mild brag, deadly-deadly flavour.)</p>
       </div>
       <ul class="grid grid-cols-2 gap-4">
         <li class="rounded-2xl border bg-white p-5 shadow-sm hover:shadow-md transition">
@@ -167,7 +140,8 @@
     <div class="mt-8 grid gap-6 sm:grid-cols-2">
       <!-- Veg -->
       <article class="group rounded-3xl border bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
-        <div class="flex items-center justify-between">
+        <img loading="lazy" src="https://source.unsplash.com/800x600/?veg,samosa" alt="Veg Samosa" class="rounded-2xl w-full h-44 object-cover img-zoom shadow-sm" />
+        <div class="mt-4 flex items-center justify-between">
           <h3 class="text-2xl font-black">Veg — Dengu + Assorted Veg</h3>
           <span class="rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-brand-green">KSh 10</span>
         </div>
@@ -180,7 +154,8 @@
 
       <!-- Non-Veg -->
       <article class="group rounded-3xl border bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
-        <div class="flex items-center justify-between">
+        <img loading="lazy" src="https://source.unsplash.com/800x600/?chicken,samosa" alt="Non-Veg Samosa" class="rounded-2xl w-full h-44 object-cover img-zoom shadow-sm" />
+        <div class="mt-4 flex items-center justify-between">
           <h3 class="text-2xl font-black">Non-Veg — Potato + Chicken</h3>
           <span class="rounded-full bg-amber-100 px-3 py-1 text-sm font-semibold text-brand-yellow">KSh 15</span>
         </div>
@@ -216,7 +191,7 @@
   <section id="order" class="reveal mx-auto max-w-7xl px-4 py-12">
     <div class="rounded-3xl border bg-white p-6 shadow-sm">
       <h2 class="text-2xl md:text-3xl font-extrabold">Your Order</h2>
-      <p class="mt-1 text-slate-600">Add items from the menu, then checkout via WhatsApp. We’ll confirm pickup/delivery details.</p>
+      <p class="mt-1 text-slate-600">Add items from the menu, then checkout via WhatsApp. Want to pay by M-Pesa? See the quick note below and paste your M-Pesa transaction code when asked.</p>
 
       <div id="cart" class="mt-6 rounded-2xl border p-4">
         <div class="flex flex-wrap items-center justify-between gap-3">
@@ -246,11 +221,20 @@
           </div>
           <div class="ml-auto font-bold">Total: KSh <span id="total">0</span></div>
         </div>
-        <div class="mt-4 flex flex-wrap gap-3">
-          <input id="cust-name" type="text" placeholder="Your name" class="w-full sm:w-auto rounded-xl border px-4 py-2" />
-          <input id="cust-location" type="text" placeholder="Estate / Pickup point" class="w-full sm:w-auto rounded-xl border px-4 py-2" />
+
+        <!-- M-Pesa note & transaction input -->
+        <div class="mt-4 rounded-md bg-amber-50 p-4 text-sm text-slate-700">
+          <strong>M-Pesa (optional):</strong> Pay using <em>Paybill</em> or <em>Till</em>. After payment, paste your M-Pesa transaction code below and press <em>Checkout on WhatsApp</em> so we can confirm instantly.
+          <div class="mt-2 text-xs text-slate-500">Example: Paybill <span id="mpesa-sample">123456</span> • Account: Your name or phone used in order. (Replace with your actual Paybill/Till.)</div>
+        </div>
+
+        <div class="mt-3 flex flex-wrap gap-3 items-center">
+          <input id="mpesa-code" type="text" placeholder="M-Pesa transaction code (optional)" class="w-full sm:w-1/2 rounded-xl border px-4 py-2" />
+          <input id="cust-name" type="text" placeholder="Your name" class="w-full sm:w-1/2 rounded-xl border px-4 py-2" />
+          <input id="cust-location" type="text" placeholder="Estate / Pickup point" class="w-full rounded-xl border px-4 py-2" />
           <textarea id="cust-notes" placeholder="Any notes (time, sauce, spice)" class="w-full rounded-xl border px-4 py-2"></textarea>
         </div>
+
         <div class="mt-4 flex flex-wrap gap-3">
           <button id="checkout-wa" class="inline-flex items-center rounded-xl bg-brand-green px-5 py-3 text-white font-semibold shadow hover:shadow-lg hover:-translate-y-0.5 transition">Checkout on WhatsApp</button>
           <button id="clear-cart" class="inline-flex items-center rounded-xl border px-5 py-3 font-semibold hover:bg-slate-50 transition">Clear</button>
@@ -281,9 +265,12 @@
     </div>
   </footer>
 
-  <!-- Minimal JS: deferred for performance -->
+  <!-- Minimal JS -->
   <script defer>
-    // Year
+    // Replace these with your real Paybill/Till if you have one
+    const MPESA_PAYBILL = ''; // e.g. '123456'
+    const MPESA_TILL = ''; // e.g. '123456'
+
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Scroll reveal
@@ -291,7 +278,7 @@
       entries.forEach(e => {
         if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
       })
-    }, { threshold: 0.15 });
+    }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
     // Simple cart
@@ -313,10 +300,12 @@
       })
     });
 
-    // Order now buttons (adds 1 and scrolls to order)
+    // Order now buttons (adds 1)
     document.querySelectorAll('.order-now').forEach(a => {
       a.addEventListener('click', (e) => {
         const key = a.dataset.item; cart[key]++; updateUI();
+        // smooth scroll to order
+        document.getElementById('order').scrollIntoView({ behavior: 'smooth', block: 'center' });
       })
     });
 
@@ -330,11 +319,12 @@
       })
     });
 
-    // Build WhatsApp message
+    // Build WhatsApp message, include M-Pesa code if provided
     function buildMessage(){
       const name = (document.getElementById('cust-name').value || '').trim();
       const loc = (document.getElementById('cust-location').value || '').trim();
       const notes = (document.getElementById('cust-notes').value || '').trim();
+      const mpesaCode = (document.getElementById('mpesa-code').value || '').trim();
       const lines = [];
       lines.push('Hello Sembuse Sambusa!');
       if (name) lines.push('Name: ' + name);
@@ -344,12 +334,21 @@
       if (cart.nonveg) lines.push(` • Non-Veg (potato + chicken): ${cart.nonveg} @ KSh ${prices.nonveg}`);
       const total = cart.veg*prices.veg + cart.nonveg*prices.nonveg;
       lines.push('Total: KSh ' + total);
+      if (mpesaCode) lines.push('M-Pesa transaction: ' + mpesaCode);
       if (notes) lines.push('Notes: ' + notes);
+      if (MPESA_PAYBILL) lines.push('Pay via M-Pesa Paybill: ' + MPESA_PAYBILL + ' (Account: ' + (name || 'your name') + ')');
+      if (MPESA_TILL) lines.push('Or use Till: ' + MPESA_TILL);
       lines.push('Kama unapenda ugali — Sembuse Sambusa deadly deadly!');
-      return encodeURIComponent(lines.join('\n'));
+      return encodeURIComponent(lines.join('
+'));
     }
 
     document.getElementById('checkout-wa').addEventListener('click', () => {
+      // quick validation
+      if (cart.veg === 0 && cart.nonveg === 0) {
+        alert('Your cart is empty — add some samosas first!');
+        return;
+      }
       const msg = buildMessage();
       const url = `https://wa.me/254756320394?text=${msg}`;
       window.open(url, '_blank');
@@ -357,6 +356,7 @@
 
     document.getElementById('clear-cart').addEventListener('click', () => {
       cart.veg = 0; cart.nonveg = 0; updateUI();
+      document.getElementById('mpesa-code').value = '';
       document.getElementById('cust-name').value = '';
       document.getElementById('cust-location').value = '';
       document.getElementById('cust-notes').value = '';
